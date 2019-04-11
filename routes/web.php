@@ -28,7 +28,7 @@ Route::get('reportePDF', function(){
 	return $pdf->stream();
 });
 
-Route::get('crearpdf/{nombre}/{paterno}/{materno}/{expediente}/{fecha}',[
+Route::get('crearpdf/{nombre}/{paterno}/{materno}/{curp}/{expediente}/{fecha}',[
 	"uses" => 'ConsultaController@crearpdf',
     "as" => 'crearpdf'
 ]);
@@ -47,3 +47,5 @@ Route::get('listado',[
     "uses" => 'GridController@listadopdf',
     "as" => 'listado'
 ]);
+//Consulta externa
+Route::get('cexterna', 'Cexterna@consultaExterna');

@@ -52,9 +52,9 @@ class ConsultaController extends Controller
         	return view('vacio');
     }
 
-    public function crearpdf($nombre, $paterno, $materno,$expediente,$fecha)
+    public function crearpdf($nombre, $paterno, $materno,$curp,$expediente,$fecha)
     {
- 		$pdf = PDF::loadView('repdf',['expediente'=>$expediente,'nombre'=>$nombre,'paterno'=>$paterno,'materno'=>$materno,'fecha'=>$fecha]);
+ 		$pdf = PDF::loadView('repdf',['expediente'=>$expediente,'nombre'=>$nombre,'paterno'=>$paterno,'materno'=>$materno,'curp'=>$curp, 'fecha'=>$fecha]);
 		$pdf->setPaper('a4','landscape');
 		return $pdf->download('HGChilpancingo-Expediente-'.$expediente.'.pdf');
     }

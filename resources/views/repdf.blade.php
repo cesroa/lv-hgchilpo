@@ -31,6 +31,14 @@
     left: 0;
     width: 100%;    
 }
+.curp{
+    position: absolute;
+    top: 42%;
+    left: -10px;
+    width: 100%;
+    font-size: 22px;
+    font-weight: bold;
+}
 </style>
     </head>
     <body>
@@ -49,6 +57,7 @@
                         <h3>{{$nombre.' '.$paterno.' '.$materno}}</h3>
                     </div>
                     <div class="exp"><b style="font-size: 20px;">{{substr($expediente,0,3).'-'.substr($expediente,3,1).'-'.substr($expediente,4,2)}}</b></div>
+                    <div class="curp">CURP: {{$curp}}</div>
                 </div>
             </div>
   
