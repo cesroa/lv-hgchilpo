@@ -38,7 +38,7 @@
         <div class="container-fluid">
   
             <div class="encabezadopdf text-right">
-                HG CHILPANCINGO, GRO.    FECHA: <b>{{date('d-m-Y',strtotime($fecha))}}</b> EXP. <b style="font-size: 22px;">{{$expediente}}</b>
+                HG CHILPANCINGO, GRO.    FECHA: <b>{{date('d-m-Y',strtotime($fecha))}}</b> EXP. <b style="font-size: 22px;">{{substr($expediente,0,3).'-'.substr($expediente,3,1).'-'.substr($expediente,4,2)}}</b>
                 <br><br>
                 <span class="text-right"><h2>{{$nombre.' '.$paterno.' '.$materno}}</h2></span>
             </div>
@@ -48,7 +48,7 @@
                     <div class="caption">
                         <h3>{{$nombre.' '.$paterno.' '.$materno}}</h3>
                     </div>
-                    <div class="exp"><h3>{{$expediente}}</h3></div>
+                    <div class="exp"><b style="font-size: 20px;">{{substr($expediente,0,3).'-'.substr($expediente,3,1).'-'.substr($expediente,4,2)}}</b></div>
                 </div>
             </div>
   

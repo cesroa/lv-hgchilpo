@@ -32,3 +32,8 @@ Route::get('crearpdf/{nombre}/{paterno}/{materno}/{expediente}/{fecha}',[
 	"uses" => 'ConsultaController@crearpdf',
     "as" => 'crearpdf'
 ]);
+
+Route::get('decapdf/{expediente}',[
+	"uses" => 'ConsultaController@cDecalog',
+    "as" => 'decapdf'
+]);

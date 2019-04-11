@@ -18,7 +18,8 @@
 					?>
 					<br><br>
 
-					<h4><a class="badge badge-info" href="{{ route('crearpdf',['nombre' => str_replace('/','-',$resulta->cNombre), 'paterno' => $resulta->cPaterno, 'materno' => $resulta->cMaterno, 'expediente' => $resulta->IDExpediente, 'fecha'=>$resulta->dFechaRegistro]) }}">Descargar PDF</a></h4>
+					<span class="badge badge-info"><h4><a class="badge badge-info" href="{{ route('crearpdf',['nombre' => str_replace('/','-',$resulta->cNombre), 'paterno' => $resulta->cPaterno, 'materno' => $resulta->cMaterno, 'expediente' => $resulta->IDExpediente, 'fecha'=>$resulta->dFechaRegistro]) }}"> Impresión de folders</a></h4></span>
+					<span class="badge badge-primary"><h4><a class="badge badge-primary" href="{{ route('decapdf',['expediente' => $resulta->IDExpediente]) }}">Descargar Carnet</a></h4></span>
                 </div>
             </div>
         </div>

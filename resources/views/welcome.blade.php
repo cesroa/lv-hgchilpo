@@ -71,7 +71,7 @@
                 </div>
 
             <div class="content">
-                <h1>Krankenhaus</h1>
+                <h2 style="font-size: 2.1em;">Archivo Clínico y Estadística</h2>
                 <img src="{{asset('svg/files.png')}}" alt="">
             </div>
         </div>

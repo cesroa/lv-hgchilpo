@@ -8,6 +8,19 @@ use Barryvdh\DomPDF\Facade as PDF;
 
 class ConsultaController extends Controller
 {
+    public function cDecalog($expediente){
+        $id = $expediente;
+        $resulta = DB::selectOne("select * from hgchp.dbo.decalogohg where IDExpediente = '$id'");
+
+        if ($resulta){
+            $pdf = PDF::loadView('pdfDeca',['nombre'=>$resulta->cNombre,'paterno'=>$resulta->cPaterno,'materno'=>$resulta->cMaterno,'localidad'=>$resulta->lNombre,'municipio'=>$resulta->mNombre,'fecha'=>$resulta->dFechaNacimiento,'curp'=>$resulta->IDPaciente,'expediente'=>$resulta->IDExpediente]);
+            $pdf->setPaper('a4','portrait');
+            return $pdf->download('HGChilpancingo-Decalogo-'.$expediente.'.pdf');
+        }
+        else
+            return view('vacio')->with('resulta',$expediente);
+    }
+
     public function consulto()
     {
         $resulta = DB::selectOne("select * from hgchp.dbo.bernahg where IDExpediente = '177545'");
