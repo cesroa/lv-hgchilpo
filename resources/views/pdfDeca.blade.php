@@ -9,16 +9,24 @@
 <style>
     body{
         background-color: #FFF !important;
-    }  
+        padding-bottom: 450px;
+    }
+     table { 
+                border-collapse: separate; 
+                border-spacing: 40px 5px;
+            } 
 	.borderless td{
-	    border: none;
+	    border: 8px;
 	}
+	@page { margin: 0px; }
+	body { margin: 0px; }
 </style>
+
     </head>
     <body>
-		<div class="container-fluid">
+		<div class="container-fluid" style="margin-top: 25px;">
             <div class="row">
-            	<table class="table borderless" style="font-size: 13px;">
+            	<table cellpadding="0" cellspacing="0" class="borderless" style="font-size: 13px;">
             		<tr>
             			<td align="center"><b style="font-size: 18px;">DECALOGO DEL BUEN PACIENTE</b></td>
             			<td style="border: 0.5px solid black; font-size: 11px;" rowspan="3" align="center">Fotografía</td>
@@ -46,23 +54,23 @@
             		</tr>
             		<tr>
             			<td align="justify">6.	Es respetuoso con los doctores y enfermeras.</td>
-            			<td colspan="2" align="center"><b style="font-size: 15px;">{{$nombre.' '.$paterno.' '.$materno}}</b></td>
+            			<td colspan="2" align="center"><b style="font-size: 15px; text-decoration: underline;">{{$nombre.' '.$paterno.' '.$materno}}</b></td>
             		</tr>
             		<tr>
             			<td align="justify">7.	Se preocupa por no hacer cosas que dañen su salud.</td>
-            			<td colspan="2">Fecha de Nacimiento: <b style="font-size: 14px;">{{date('d-m-Y',strtotime($fecha))}}</b></td>
+            			<td colspan="2">Fecha de Nacimiento: <b style="font-size: 14px; text-decoration: underline;">{{date('d-m-Y',strtotime($fecha))}}</b></td>
             		</tr>
             		<tr>
             			<td align="justify">8.	Mantiene adecuados hábitos higiénicos y dietéticos.</td>
-            			<td colspan="2">Municipio: <b style="font-size: 14px;">{{$municipio}}</b></td>
+            			<td colspan="2">Municipio: <b style="font-size: 14px; text-decoration: underline;">{{$municipio}}</b></td>
             		</tr>
             		<tr>
             			<td align="justify">9.	Trae a la mano sus estudios de laboratorio e Imagenología para su consulta.</td>
-            			<td colspan="2">Localidad: <b style="font-size: 14px;">{{$localidad}}</b></td>
+            			<td colspan="2">Localidad: <b style="font-size: 14px; text-decoration: underline;">{{$localidad}}</b></td>
             		</tr>
             		<tr>
             			<td align="justify">10.	En caso de ser necesario acude con su acompañante el cual debe saber del seguimiento de la enfermedad.</td>
-            			<td colspan="2">Curp: <b style="font-size: 14px;">{{$curp}}</b></td>
+            			<td colspan="2">Curp: <b style="font-size: 14px; text-decoration: underline;">{{$curp}}</b></td>
             		</tr>
             		<tr>
             			<td align="right">Teléfono:  01 (747) 49 422 00</td>

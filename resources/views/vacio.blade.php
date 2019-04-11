@@ -9,7 +9,6 @@
 
                 <div class="card-body">
 					<h2>No se encontró el expediente en los registros</h2>
-					{{$resulta}}
                 </div>
             </div>
         </div>

@@ -15,7 +15,7 @@ class ConsultaController extends Controller
         if ($resulta){
             $pdf = PDF::loadView('pdfDeca',['nombre'=>$resulta->cNombre,'paterno'=>$resulta->cPaterno,'materno'=>$resulta->cMaterno,'localidad'=>$resulta->lNombre,'municipio'=>$resulta->mNombre,'fecha'=>$resulta->dFechaNacimiento,'curp'=>$resulta->IDPaciente,'expediente'=>$resulta->IDExpediente]);
             $pdf->setPaper('a4','portrait');
-            return $pdf->download('HGChilpancingo-Decalogo-'.$expediente.'.pdf');
+            return $pdf->stream('HGChilpancingo-Carnet-'.$expediente.'.pdf');
         }
         else
             return view('vacio')->with('resulta',$expediente);
@@ -57,6 +57,17 @@ class ConsultaController extends Controller
  		$pdf = PDF::loadView('repdf',['expediente'=>$expediente,'nombre'=>$nombre,'paterno'=>$paterno,'materno'=>$materno,'fecha'=>$fecha]);
 		$pdf->setPaper('a4','landscape');
 		return $pdf->download('HGChilpancingo-Expediente-'.$expediente.'.pdf');
+    }
+
+//Listado expedientes
+    public function bexpediente(Request $recibir)
+    {
+        $id = $recibir->input('idpaciente');
+        $resulta = DB::selectOne("select * from hgchp.dbo.bernahg where IDExpediente = '$id'");
+        if ($resulta)
+            return view('expedientes')->with('resulta',$resulta);
+        else
+            return view('vacio');
     }
 
 }

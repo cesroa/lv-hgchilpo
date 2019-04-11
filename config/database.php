@@ -81,6 +81,14 @@ return [
             'prefix' => '',
             'prefix_indexes' => true,
         ],
+        'DB_MYSQL' => [
+            'driver'      => 'mysql',
+            'host'        => env('DB_HOST_MYSQL', 'forge'),
+            'database'    => env('DB_DATABASE_MYSQL', 'forge'),
+            'username'    => env('DB_USERNAME_MYSQL', 'forge'),
+            'password'    => env('DB_PASSWORD_MYSQL', ''),
+            'prefix'      => '',
+        ],
 
     ],
 

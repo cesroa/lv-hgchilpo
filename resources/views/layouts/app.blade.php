@@ -40,6 +40,12 @@
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
                             <li class="nav-item">
+                                <a class="nav-link" href="{{ url('grids') }}">Listado</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url('expediente') }}">Crear listado</a>
+                            </li>
+                            <li class="nav-item">
                                 <a class="nav-link" href="{{ route('buscar') }}">Buscar</a>
                             </li>
                     </ul>

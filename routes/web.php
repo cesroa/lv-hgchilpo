@@ -37,3 +37,13 @@ Route::get('decapdf/{expediente}',[
 	"uses" => 'ConsultaController@cDecalog',
     "as" => 'decapdf'
 ]);
+
+Route::post('expedientes', 'ConsultaController@bexpediente');
+Route::get('expediente', function () {
+    return view('bexpediente');
+});
+Route::resource('grids','GridController');
+Route::get('listado',[
+    "uses" => 'GridController@listadopdf',
+    "as" => 'listado'
+]);

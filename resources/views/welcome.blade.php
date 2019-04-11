@@ -39,7 +39,16 @@
                 right: 10px;
                 top: 18px;
             }
-
+            .top-left {
+                position: absolute;
+                left: 10px;
+                top: 18px;
+            }
+            .top-center {
+                position: absolute;
+                center: 10px;
+                top: 18px;
+            }
             .content {
                 text-align: center;
             }
@@ -65,7 +74,12 @@
     </head>
     <body>
         <div class="flex-center position-ref full-height">
-            
+                <div class="top-left links">
+                    <a href="{{ url('expediente') }}">Crear listado expediente</a>
+                </div>
+                <div class="top-center links">
+                    <a href="{{ url('grids') }}">Listado</a>
+                </div>
                 <div class="top-right links">
                         <a href="{{ url('buscar') }}">Buscar expediente</a>
                 </div>
